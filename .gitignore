@@ -1,4 +1,5 @@
 target/*
-tlc.iml
-tlc.ipr
-tlc.iws
+*.iml
+*.ipr
+*.iws
+*~
