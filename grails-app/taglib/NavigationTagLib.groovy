@@ -117,7 +117,7 @@ class NavigationTagLib {
     }
     
     protected isItemPathActive(itemPath, activePath) {
-        def maxElems = Math.min(itemPath.size(),activePath.size())
+        def maxElems = Math.min(itemPath.size(),activePath?.size()?:0)
         if (maxElems) {
             return itemPath[0..maxElems-1] == activePath[0..maxElems-1]
         } else {
@@ -185,7 +185,7 @@ class NavigationTagLib {
             // Resolve parent by controller instead
             //attrs.controller = GrailsClassUtils.getLogicalName(controllerName, 'Controller')
             //attrs.remove('title')
-            sectionCode = controllerName.toLowerCase()
+            sectionCode = controllerName?.toLowerCase()
         } else {
             sectionCode = attrs.title.toLowerCase()
         }
