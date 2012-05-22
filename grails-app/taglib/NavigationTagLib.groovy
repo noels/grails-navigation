@@ -45,7 +45,7 @@ class NavigationTagLib {
     def eachItem = { attrs, body ->
         def categ = attrs.group ?: '*'
         def var = attrs.var
-        
+
         def items = navigationService.byGroup[categ]
 
         def activePath = attrs.activePath ?: navigationService.reverseMapActivePathFor(controllerName, actionName, params)
