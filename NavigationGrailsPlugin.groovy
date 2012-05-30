@@ -52,7 +52,7 @@ Tags for doing site navigation and menus by convention
             }
         }
 
-        navSrv.updated()        
+        navSrv.update()        
     }
     
     def onConfigChange = { event ->
